@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  dumper:
+    container_name: dumper
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./backups:/var/backups
+    env_file: .env
+    restart: on-failure
+    tty: true

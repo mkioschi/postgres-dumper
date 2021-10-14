@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+### Docker ###
+/backups
+
+### Globais ###
+/.local
+/.history
+/.idea
+/.cache
+/.bash_history
+**/*.bak
+**/*.swp
+**/.DS_store
