@@ -1,1 +1,1 @@
-* * * * * echo "$(date) Teste XXX" >> /tmp/nb-cron.log
+0 1 * * * sh /bin/dumper/backup.sh >> /var/log/dumper.log
