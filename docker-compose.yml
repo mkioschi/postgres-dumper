@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./backups:/var/backups
+      - ./logs:/logs
     env_file: .env
     restart: on-failure
     tty: true

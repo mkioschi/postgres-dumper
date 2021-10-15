@@ -1,1 +1,1 @@
-0 1 * * * sh /bin/dumper/backup.sh >> /var/log/dumper.log
+0 1 * * * sh /bin/dumper/backup.sh >> /logs/dumper.log 2>&1

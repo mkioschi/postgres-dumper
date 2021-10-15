@@ -36,13 +36,10 @@ if [ -z "${POSTGRES_PASSWORD}" ]; then
   exit 1
 fi
 
-if [ "${S3_BACKUP}" != "yes" && "${KEEP_LOCAL_DUMP}" != "yes" ]; then
+if [ "${S3_BACKUP}" != "yes" -a "${KEEP_LOCAL_DUMP}" != "yes" ]; then
   echo "At least one way of backup must be 'yes', S3_BACKUP or KEEP_LOCAL_DUMP."
   exit 1
 fi
-
-echo "Continue..."
-exit 1
 
 # 2. Create dump
 export PGPASSWORD=$POSTGRES_PASSWORD
@@ -75,9 +72,9 @@ if [ -n "${ENCRYPTION_PASSWORD}" ]; then
   DEST_FILE="${DEST_FILE}.enc"
 fi
 
-# 4. Create local copy, if needed
+# 4. Create a local copy, if needed
 if [ "${KEEP_LOCAL_DUMP}" == "yes" ]; then
-  echo "Creating local copy..."
+  echo "Creating a local copy..."
 
   mkdir -p /var/backups/$DATE_PATH
 

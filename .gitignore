@@ -3,6 +3,7 @@
 
 ### Docker ###
 /backups
+/logs
 
 ### Globais ###
 /.local
