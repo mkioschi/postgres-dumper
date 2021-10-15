@@ -52,3 +52,4 @@ help:
 	@echo "${CG}   up                  ${RC}Start dumper service"
 	@echo ""
 	@echo "${CY}See more: https://github.com/mkioschi/postgres-dumper${RC}"
+	@echo ""
