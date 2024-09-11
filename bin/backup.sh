@@ -51,7 +51,7 @@ DATE_PATH=$(date +"%Y/%m")
 
 if [ "${POSTGRES_DATABASE}" == "all" ]; then
   echo "Creating dump of all databases from ${POSTGRES_HOST}..."
-  pg_dumpall $POSTGRES_HOST_OPTS | gzip > $SOURCE_FILE
+  pg_dumpall $ | gzip > $SOURCE_FILE
 else
   echo "Creating dump of ${POSTGRES_DATABASE} database from ${POSTGRES_HOST}..."
   pg_dump $POSTGRES_HOST_OPTS $POSTGRES_DATABASE | gzip > $SOURCE_FILE

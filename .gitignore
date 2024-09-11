@@ -1,11 +1,4 @@
-# Environment variables
 .env
-
-### Docker ###
-/backups
-/logs
-
-### Globais ###
 /.local
 /.history
 /.idea
